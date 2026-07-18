@@ -1,0 +1,56 @@
+{
+  "name": "hexactyl-panel",
+  "version": "1.0.0",
+  "description": "Hexactyl - Game Server Management Panel",
+  "main": "main.js",
+  "author": "Hexactyl Team",
+  "license": "MIT",
+  "homepage": "https://hexactyl-docs.vercel.app",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "build:portable": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.hexactyl.panel",
+    "productName": "Hexactyl Panel",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "icon.ico",
+      "splash.html"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Hexactyl Panel"
+    },
+    "portable": {
+      "artifactName": "Hexactyl-Panel-${version}-portable.exe"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.0"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.0"
+  }
+}

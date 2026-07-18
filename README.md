@@ -62,6 +62,17 @@
 | **Dashboard Analytics** | Server usage statistics and node health overview |
 | **Enhanced UI** | Modernized interface with responsive design for all devices |
 
+## Desktop App
+
+Download the Hexactyl desktop application for Windows:
+
+| Version | Download | Description |
+|---------|----------|-------------|
+| **Windows Installer** | [Hexactyl Panel Setup 1.0.0.exe](https://github.com/Hexactyl-Projects/hexactyl/releases/download/v1.0.0/Hexactyl%20Panel%20Setup%201.0.0.exe) | Full installation with Start Menu and desktop shortcuts |
+| **Windows Portable** | [Hexactyl-Panel-1.0.0-portable.exe](https://github.com/Hexactyl-Projects/hexactyl/releases/download/v1.0.0/Hexactyl-Panel-1.0.0-portable.exe) | No installation required, run directly |
+
+> **Note:** The desktop app connects to your panel instance. Make sure your Hexactyl panel is running before launching the desktop app.
+
 ## Supported Games
 
 Hexactyl supports a wide variety of games through Docker containers:

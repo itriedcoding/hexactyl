@@ -35,3 +35,8 @@ resources/lang/locales.js
 /public/build
 /public/hot
 result
+
+# Desktop app
+desktop/dist
+desktop/node_modules
+desktop/.env*
