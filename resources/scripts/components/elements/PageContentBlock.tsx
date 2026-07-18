@@ -34,7 +34,7 @@ const PageContentBlock: React.FC<PageContentBlockProps> = ({ title, showFlashKey
                         >
                             Hexactyl
                         </a>
-                        &nbsp;&copy; 2024 - {new Date().getFullYear()}
+                        &nbsp;&copy; 2026 - {new Date().getFullYear()}
                     </p>
                 </ContentContainer>
             </>

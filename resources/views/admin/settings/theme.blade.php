@@ -10,13 +10,13 @@
     <!-- Theme Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         @foreach($themes as $key => $theme)
-        <div class="theme-card rounded-xl overflow-hidden border-2 transition-all duration-200 {{ $currentTheme === $key ? 'border-purple-500 ring-2 ring-purple-500/50' : 'border-neutral-600 hover:border-neutral-400' }}"
+        <div class="theme-card rounded-xl overflow-hidden border-2 transition-all duration-200 {{ $currentTheme === $key ? 'border-orange-500 ring-2 ring-orange-500/50' : 'border-neutral-600 hover:border-neutral-400' }}"
              style="background: linear-gradient(135deg, {{ $theme['primary_color'] }} 0%, {{ $theme['bg_color'] }} 100%);"
              onclick="selectTheme('{{ $key }}')">
 
             @if($currentTheme === $key)
             <div class="absolute top-3 right-3 w-6 h-6 rounded-full bg-white flex items-center justify-center">
-                <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                 </svg>
             </div>
@@ -68,7 +68,7 @@
             @csrf
             <label class="flex items-center space-x-3 cursor-pointer">
                 <input type="checkbox" name="enabled" value="1" {{ $customCssEnabled ? 'checked' : '' }}
-                       class="w-5 h-5 rounded border-neutral-600 text-purple-600 focus:ring-purple-500">
+                       class="w-5 h-5 rounded border-neutral-600 text-orange-600 focus:ring-orange-500">
                 <span class="text-neutral-300">Enable Custom CSS</span>
             </label>
         </form>
@@ -81,12 +81,12 @@ function selectTheme(themeKey) {
 
     // Update UI
     document.querySelectorAll('.theme-card').forEach(card => {
-        card.classList.remove('border-purple-500', 'ring-2', 'ring-purple-500/50');
+        card.classList.remove('border-orange-500', 'ring-2', 'ring-orange-500/50');
         card.classList.add('border-neutral-600');
     });
 
     event.currentTarget.classList.remove('border-neutral-600');
-    event.currentTarget.classList.add('border-purple-500', 'ring-2', 'ring-purple-500/50');
+    event.currentTarget.classList.add('border-orange-500', 'ring-2', 'ring-orange-500/50');
 
     // Show preview
     fetch('/admin/settings/theme/css/' + themeKey)

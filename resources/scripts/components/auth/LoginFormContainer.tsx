@@ -41,7 +41,7 @@ export default forwardRef<HTMLFormElement, Props>(({ title, ...props }, ref) => 
             </div>
         </Form>
         <p css={tw`text-center text-neutral-500 text-xs mt-4`}>
-            &copy; 2024 - {new Date().getFullYear()}&nbsp;
+            &copy; 2026 - {new Date().getFullYear()}&nbsp;
             <a
                 rel={'noopener nofollow noreferrer'}
                 href={'https://github.com/itriedcoding/Hexactyl'}
