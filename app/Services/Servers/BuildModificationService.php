@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Services\Servers;
+namespace Hexactyl\\Services\Servers;
 
 use Illuminate\Support\Arr;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Allocation;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Allocation;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Exceptions\DisplayException;
+use Hexactyl\\Exceptions\DisplayException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Hexactyl\\Repositories\Wings\DaemonServerRepository;
+use Hexactyl\\Exceptions\Http\Connection\DaemonConnectionException;
 
 class BuildModificationService
 {

@@ -1,8 +1,11 @@
 # The MIT License (MIT)
 
 ```
-Pterodactyl®
-Copyright © Dane Everitt <dane@daneeveritt.com> and contributors
+Hexactyl
+Copyright (c) 2024-Present itriedcoding and contributors
+
+Based on Hexactyl Panel
+Copyright (c) 2015-2024 Dane Everitt and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

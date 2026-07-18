@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Subusers;
+namespace Hexactyl\\Http\Requests\Api\Client\Servers\Subusers;
 
-use Pterodactyl\Rules\UserEmail;
-use Pterodactyl\Models\Permission;
+use Hexactyl\\Rules\UserEmail;
+use Hexactyl\\Models\Permission;
 
 class StoreSubuserRequest extends SubuserRequest
 {

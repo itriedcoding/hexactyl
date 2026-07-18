@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client\Server\Backup;
+namespace Hexactyl\\Tests\Integration\Api\Client\Server\Backup;
 
 use Mockery\MockInterface;
 use Carbon\CarbonImmutable;
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Backup;
-use Pterodactyl\Models\Permission;
+use Hexactyl\\Models\Backup;
+use Hexactyl\\Models\Permission;
 use GuzzleHttp\Psr7\Response as GuzzleResponse;
-use Pterodactyl\Repositories\Wings\DaemonBackupRepository;
-use Pterodactyl\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
+use Hexactyl\\Repositories\Wings\DaemonBackupRepository;
+use Hexactyl\\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
 
 class RestoreBackupTest extends ClientApiIntegrationTestCase
 {

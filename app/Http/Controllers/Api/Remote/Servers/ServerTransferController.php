@@ -1,22 +1,22 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Remote\Servers;
+namespace Hexactyl\\Http\Controllers\Api\Remote\Servers;
 
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Node;
+use Hexactyl\\Models\Node;
 use Webmozart\Assert\Assert;
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Models\Allocation;
+use Hexactyl\\Models\Allocation;
 use Illuminate\Support\Facades\Log;
-use Pterodactyl\Models\ServerTransfer;
+use Hexactyl\\Models\ServerTransfer;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Exceptions\Http\HttpForbiddenException;
-use Pterodactyl\Repositories\Eloquent\ServerRepository;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
+use Hexactyl\\Http\Controllers\Controller;
+use Hexactyl\\Exceptions\Http\HttpForbiddenException;
+use Hexactyl\\Repositories\Eloquent\ServerRepository;
+use Hexactyl\\Repositories\Wings\DaemonServerRepository;
 use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Hexactyl\\Exceptions\Http\Connection\DaemonConnectionException;
 
 class ServerTransferController extends Controller
 {
@@ -77,7 +77,7 @@ class ServerTransferController extends Controller
             throw new HttpForbiddenException('Requesting node does not have permission to access this server.');
         }
 
-        /** @var \Pterodactyl\Models\Server $server */
+        /** @var \Hexactyl\\Models\Server $server */
         $server = $this->connection->transaction(function () use ($server, $transfer) {
             $allocations = array_merge([$transfer->old_allocation], $transfer->old_additional_allocations);
 

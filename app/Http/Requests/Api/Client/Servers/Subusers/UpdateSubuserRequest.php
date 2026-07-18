@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Subusers;
+namespace Hexactyl\\Http\Requests\Api\Client\Servers\Subusers;
 
-use Pterodactyl\Models\Permission;
+use Hexactyl\\Models\Permission;
 
 class UpdateSubuserRequest extends SubuserRequest
 {

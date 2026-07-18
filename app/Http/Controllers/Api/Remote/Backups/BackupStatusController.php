@@ -1,19 +1,19 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Remote\Backups;
+namespace Hexactyl\\Http\Controllers\Api\Remote\Backups;
 
 use Carbon\CarbonImmutable;
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Backup;
+use Hexactyl\\Models\Backup;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Facades\Activity;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Extensions\Backups\BackupManager;
-use Pterodactyl\Extensions\Filesystem\S3Filesystem;
-use Pterodactyl\Exceptions\Http\HttpForbiddenException;
+use Hexactyl\\Facades\Activity;
+use Hexactyl\\Exceptions\DisplayException;
+use Hexactyl\\Http\Controllers\Controller;
+use Hexactyl\\Extensions\Backups\BackupManager;
+use Hexactyl\\Extensions\Filesystem\S3Filesystem;
+use Hexactyl\\Exceptions\Http\HttpForbiddenException;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Pterodactyl\Http\Requests\Api\Remote\ReportBackupCompleteRequest;
+use Hexactyl\\Http\Requests\Api\Remote\ReportBackupCompleteRequest;
 
 class BackupStatusController extends Controller
 {
@@ -32,7 +32,7 @@ class BackupStatusController extends Controller
     public function index(ReportBackupCompleteRequest $request, string $backup): JsonResponse
     {
         // Get the node associated with the request.
-        /** @var \Pterodactyl\Models\Node $node */
+        /** @var \Hexactyl\\Models\Node $node */
         $node = $request->attributes->get('node');
 
         /** @var Backup $model */
@@ -42,7 +42,7 @@ class BackupStatusController extends Controller
 
         // Check that the backup is "owned" by the node making the request. This avoids other nodes
         // from messing with backups that they don't own.
-        /** @var \Pterodactyl\Models\Server $server */
+        /** @var \Hexactyl\\Models\Server $server */
         $server = $model->server;
         if ($server->node_id !== $node->id) {
             throw new HttpForbiddenException('Requesting node does not have permission to access this server.');

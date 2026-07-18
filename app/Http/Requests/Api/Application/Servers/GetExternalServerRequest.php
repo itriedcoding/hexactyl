@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Servers;
+namespace Hexactyl\\Http\Requests\Api\Application\Servers;
 
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Hexactyl\\Services\Acl\Api\AdminAcl;
+use Hexactyl\\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class GetExternalServerRequest extends ApplicationApiRequest
 {

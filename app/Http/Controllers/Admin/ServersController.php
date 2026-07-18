@@ -1,39 +1,39 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin;
+namespace Hexactyl\\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Pterodactyl\Models\User;
+use Hexactyl\\Models\User;
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Mount;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Database;
-use Pterodactyl\Models\MountServer;
+use Hexactyl\\Models\Mount;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Database;
+use Hexactyl\\Models\MountServer;
 use Illuminate\Http\RedirectResponse;
 use Prologue\Alerts\AlertsMessageBag;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Http\Controllers\Controller;
+use Hexactyl\\Exceptions\DisplayException;
+use Hexactyl\\Http\Controllers\Controller;
 use Illuminate\Validation\ValidationException;
-use Pterodactyl\Services\Servers\SuspensionService;
-use Pterodactyl\Repositories\Eloquent\MountRepository;
-use Pterodactyl\Services\Servers\ServerDeletionService;
-use Pterodactyl\Services\Servers\ReinstallServerService;
-use Pterodactyl\Exceptions\Model\DataValidationException;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Services\Servers\BuildModificationService;
-use Pterodactyl\Services\Databases\DatabasePasswordService;
-use Pterodactyl\Services\Servers\DetailsModificationService;
-use Pterodactyl\Services\Servers\StartupModificationService;
-use Pterodactyl\Contracts\Repository\NestRepositoryInterface;
-use Pterodactyl\Http\Requests\Admin\ServerDetailsFormRequest;
-use Pterodactyl\Repositories\Eloquent\DatabaseHostRepository;
-use Pterodactyl\Services\Databases\DatabaseManagementService;
+use Hexactyl\\Services\Servers\SuspensionService;
+use Hexactyl\\Repositories\Eloquent\MountRepository;
+use Hexactyl\\Services\Servers\ServerDeletionService;
+use Hexactyl\\Services\Servers\ReinstallServerService;
+use Hexactyl\\Exceptions\Model\DataValidationException;
+use Hexactyl\\Repositories\Wings\DaemonServerRepository;
+use Hexactyl\\Services\Servers\BuildModificationService;
+use Hexactyl\\Services\Databases\DatabasePasswordService;
+use Hexactyl\\Services\Servers\DetailsModificationService;
+use Hexactyl\\Services\Servers\StartupModificationService;
+use Hexactyl\\Contracts\Repository\NestRepositoryInterface;
+use Hexactyl\\Http\Requests\Admin\ServerDetailsFormRequest;
+use Hexactyl\\Repositories\Eloquent\DatabaseHostRepository;
+use Hexactyl\\Services\Databases\DatabaseManagementService;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
-use Pterodactyl\Contracts\Repository\ServerRepositoryInterface;
-use Pterodactyl\Contracts\Repository\DatabaseRepositoryInterface;
-use Pterodactyl\Contracts\Repository\AllocationRepositoryInterface;
-use Pterodactyl\Services\Servers\ServerConfigurationStructureService;
-use Pterodactyl\Http\Requests\Admin\Servers\Databases\StoreServerDatabaseRequest;
+use Hexactyl\\Contracts\Repository\ServerRepositoryInterface;
+use Hexactyl\\Contracts\Repository\DatabaseRepositoryInterface;
+use Hexactyl\\Contracts\Repository\AllocationRepositoryInterface;
+use Hexactyl\\Services\Servers\ServerConfigurationStructureService;
+use Hexactyl\\Http\Requests\Admin\Servers\Databases\StoreServerDatabaseRequest;
 
 class ServersController extends Controller
 {
@@ -66,7 +66,7 @@ class ServersController extends Controller
      * Update the details for a server.
      *
      * @throws DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      */
     public function setDetails(ServerDetailsFormRequest $request, Server $server): RedirectResponse
     {
@@ -84,7 +84,7 @@ class ServersController extends Controller
      *
      * @throws DisplayException
      * @throws DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      */
     public function toggleInstall(Server $server): RedirectResponse
     {
@@ -106,7 +106,7 @@ class ServersController extends Controller
      *
      * @throws DisplayException
      * @throws DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      */
     public function reinstallServer(Server $server): RedirectResponse
     {
@@ -121,7 +121,7 @@ class ServersController extends Controller
      *
      * @throws DisplayException
      * @throws DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      */
     public function manageSuspension(Request $request, Server $server): RedirectResponse
     {
@@ -137,7 +137,7 @@ class ServersController extends Controller
      * Update the build configuration for a server.
      *
      * @throws DisplayException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      * @throws ValidationException
      */
     public function updateBuild(Request $request, Server $server): RedirectResponse

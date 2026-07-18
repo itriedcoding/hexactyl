@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Providers;
+namespace Hexactyl\\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Pterodactyl\Services\Activity\ActivityLogBatchService;
-use Pterodactyl\Services\Activity\ActivityLogTargetableService;
+use Hexactyl\\Services\Activity\ActivityLogBatchService;
+use Hexactyl\\Services\Activity\ActivityLogTargetableService;
 
 class ActivityLogServiceProvider extends ServiceProvider
 {

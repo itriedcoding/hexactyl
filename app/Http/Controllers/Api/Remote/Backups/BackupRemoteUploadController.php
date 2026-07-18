@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Remote\Backups;
+namespace Hexactyl\\Http\Controllers\Api\Remote\Backups;
 
 use Carbon\CarbonImmutable;
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Backup;
+use Hexactyl\\Models\Backup;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Extensions\Backups\BackupManager;
-use Pterodactyl\Extensions\Filesystem\S3Filesystem;
-use Pterodactyl\Exceptions\Http\HttpForbiddenException;
+use Hexactyl\\Http\Controllers\Controller;
+use Hexactyl\\Extensions\Backups\BackupManager;
+use Hexactyl\\Extensions\Filesystem\S3Filesystem;
+use Hexactyl\\Exceptions\Http\HttpForbiddenException;
 use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
@@ -34,7 +34,7 @@ class BackupRemoteUploadController extends Controller
     public function __invoke(Request $request, string $backup): JsonResponse
     {
         // Get the node associated with the request.
-        /** @var \Pterodactyl\Models\Node $node */
+        /** @var \Hexactyl\\Models\Node $node */
         $node = $request->attributes->get('node');
 
         // Get the size query parameter.

@@ -1,13 +1,13 @@
 <?php
 
-use Pterodactyl\Enum\ResourceLimit;
+use Hexactyl\\Enum\ResourceLimit;
 use Illuminate\Support\Facades\Route;
-use Pterodactyl\Http\Controllers\Api\Client;
-use Pterodactyl\Http\Middleware\Activity\ServerSubject;
-use Pterodactyl\Http\Middleware\Activity\AccountSubject;
-use Pterodactyl\Http\Middleware\RequireTwoFactorAuthentication;
-use Pterodactyl\Http\Middleware\Api\Client\Server\ResourceBelongsToServer;
-use Pterodactyl\Http\Middleware\Api\Client\Server\AuthenticateServerAccess;
+use Hexactyl\\Http\Controllers\Api\Client;
+use Hexactyl\\Http\Middleware\Activity\ServerSubject;
+use Hexactyl\\Http\Middleware\Activity\AccountSubject;
+use Hexactyl\\Http\Middleware\RequireTwoFactorAuthentication;
+use Hexactyl\\Http\Middleware\Api\Client\Server\ResourceBelongsToServer;
+use Hexactyl\\Http\Middleware\Api\Client\Server\AuthenticateServerAccess;
 
 /*
 |--------------------------------------------------------------------------

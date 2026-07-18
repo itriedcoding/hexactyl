@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Repositories\Wings;
+namespace Hexactyl\\Repositories\Wings;
 
 use Webmozart\Assert\Assert;
-use Pterodactyl\Models\Server;
+use Hexactyl\\Models\Server;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\TransferException;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Hexactyl\\Exceptions\Http\Connection\DaemonConnectionException;
 
 /**
- * @method \Pterodactyl\Repositories\Wings\DaemonServerRepository setNode(\Pterodactyl\Models\Node $node)
- * @method \Pterodactyl\Repositories\Wings\DaemonServerRepository setServer(\Pterodactyl\Models\Server $server)
+ * @method \Hexactyl\\Repositories\Wings\DaemonServerRepository setNode(\Hexactyl\\Models\Node $node)
+ * @method \Hexactyl\\Repositories\Wings\DaemonServerRepository setServer(\Hexactyl\\Models\Server $server)
  */
 class DaemonServerRepository extends DaemonRepository
 {
@@ -132,7 +132,7 @@ class DaemonServerRepository extends DaemonRepository
      * correctly and avoids any costly mistakes in the codebase.
      *
      * @deprecated
-     * @see \Pterodactyl\Repositories\Wings\DaemonRevocationRepository::deauthorize()
+     * @see \Hexactyl\\Repositories\Wings\DaemonRevocationRepository::deauthorize()
      *
      * @throws DaemonConnectionException
      */

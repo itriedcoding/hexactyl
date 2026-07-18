@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Repositories\Wings;
+namespace Hexactyl\\Repositories\Wings;
 
-use Pterodactyl\Models\Node;
+use Hexactyl\\Models\Node;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\TransferException;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Hexactyl\\Exceptions\Http\Connection\DaemonConnectionException;
 
 /**
- * @method \Pterodactyl\Repositories\Wings\DaemonConfigurationRepository setNode(\Pterodactyl\Models\Node $node)
- * @method \Pterodactyl\Repositories\Wings\DaemonConfigurationRepository setServer(\Pterodactyl\Models\Server $server)
+ * @method \Hexactyl\\Repositories\Wings\DaemonConfigurationRepository setNode(\Hexactyl\\Models\Node $node)
+ * @method \Hexactyl\\Repositories\Wings\DaemonConfigurationRepository setServer(\Hexactyl\\Models\Server $server)
  */
 class DaemonConfigurationRepository extends DaemonRepository
 {

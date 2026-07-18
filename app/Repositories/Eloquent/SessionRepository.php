@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Repositories\Eloquent;
+namespace Hexactyl\\Repositories\Eloquent;
 
-use Pterodactyl\Models\Session;
+use Hexactyl\\Models\Session;
 use Illuminate\Support\Collection;
-use Pterodactyl\Contracts\Repository\SessionRepositoryInterface;
+use Hexactyl\\Contracts\Repository\SessionRepositoryInterface;
 
 class SessionRepository extends EloquentRepository implements SessionRepositoryInterface
 {

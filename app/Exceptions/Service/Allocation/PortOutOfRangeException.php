@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Allocation;
+namespace Hexactyl\\Exceptions\Service\Allocation;
 
-use Pterodactyl\Exceptions\DisplayException;
+use Hexactyl\\Exceptions\DisplayException;
 
 class PortOutOfRangeException extends DisplayException
 {

@@ -1,42 +1,42 @@
 <?php
 
-namespace Pterodactyl\Providers;
+namespace Hexactyl\\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Pterodactyl\Repositories\Eloquent\EggRepository;
-use Pterodactyl\Repositories\Eloquent\NestRepository;
-use Pterodactyl\Repositories\Eloquent\NodeRepository;
-use Pterodactyl\Repositories\Eloquent\TaskRepository;
-use Pterodactyl\Repositories\Eloquent\UserRepository;
-use Pterodactyl\Repositories\Eloquent\ApiKeyRepository;
-use Pterodactyl\Repositories\Eloquent\ServerRepository;
-use Pterodactyl\Repositories\Eloquent\SessionRepository;
-use Pterodactyl\Repositories\Eloquent\SubuserRepository;
-use Pterodactyl\Repositories\Eloquent\DatabaseRepository;
-use Pterodactyl\Repositories\Eloquent\LocationRepository;
-use Pterodactyl\Repositories\Eloquent\ScheduleRepository;
-use Pterodactyl\Repositories\Eloquent\SettingsRepository;
-use Pterodactyl\Repositories\Eloquent\AllocationRepository;
-use Pterodactyl\Contracts\Repository\EggRepositoryInterface;
-use Pterodactyl\Repositories\Eloquent\EggVariableRepository;
-use Pterodactyl\Contracts\Repository\NestRepositoryInterface;
-use Pterodactyl\Contracts\Repository\NodeRepositoryInterface;
-use Pterodactyl\Contracts\Repository\TaskRepositoryInterface;
-use Pterodactyl\Contracts\Repository\UserRepositoryInterface;
-use Pterodactyl\Repositories\Eloquent\DatabaseHostRepository;
-use Pterodactyl\Contracts\Repository\ApiKeyRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ServerRepositoryInterface;
-use Pterodactyl\Repositories\Eloquent\ServerVariableRepository;
-use Pterodactyl\Contracts\Repository\SessionRepositoryInterface;
-use Pterodactyl\Contracts\Repository\SubuserRepositoryInterface;
-use Pterodactyl\Contracts\Repository\DatabaseRepositoryInterface;
-use Pterodactyl\Contracts\Repository\LocationRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ScheduleRepositoryInterface;
-use Pterodactyl\Contracts\Repository\SettingsRepositoryInterface;
-use Pterodactyl\Contracts\Repository\AllocationRepositoryInterface;
-use Pterodactyl\Contracts\Repository\EggVariableRepositoryInterface;
-use Pterodactyl\Contracts\Repository\DatabaseHostRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ServerVariableRepositoryInterface;
+use Hexactyl\\Repositories\Eloquent\EggRepository;
+use Hexactyl\\Repositories\Eloquent\NestRepository;
+use Hexactyl\\Repositories\Eloquent\NodeRepository;
+use Hexactyl\\Repositories\Eloquent\TaskRepository;
+use Hexactyl\\Repositories\Eloquent\UserRepository;
+use Hexactyl\\Repositories\Eloquent\ApiKeyRepository;
+use Hexactyl\\Repositories\Eloquent\ServerRepository;
+use Hexactyl\\Repositories\Eloquent\SessionRepository;
+use Hexactyl\\Repositories\Eloquent\SubuserRepository;
+use Hexactyl\\Repositories\Eloquent\DatabaseRepository;
+use Hexactyl\\Repositories\Eloquent\LocationRepository;
+use Hexactyl\\Repositories\Eloquent\ScheduleRepository;
+use Hexactyl\\Repositories\Eloquent\SettingsRepository;
+use Hexactyl\\Repositories\Eloquent\AllocationRepository;
+use Hexactyl\\Contracts\Repository\EggRepositoryInterface;
+use Hexactyl\\Repositories\Eloquent\EggVariableRepository;
+use Hexactyl\\Contracts\Repository\NestRepositoryInterface;
+use Hexactyl\\Contracts\Repository\NodeRepositoryInterface;
+use Hexactyl\\Contracts\Repository\TaskRepositoryInterface;
+use Hexactyl\\Contracts\Repository\UserRepositoryInterface;
+use Hexactyl\\Repositories\Eloquent\DatabaseHostRepository;
+use Hexactyl\\Contracts\Repository\ApiKeyRepositoryInterface;
+use Hexactyl\\Contracts\Repository\ServerRepositoryInterface;
+use Hexactyl\\Repositories\Eloquent\ServerVariableRepository;
+use Hexactyl\\Contracts\Repository\SessionRepositoryInterface;
+use Hexactyl\\Contracts\Repository\SubuserRepositoryInterface;
+use Hexactyl\\Contracts\Repository\DatabaseRepositoryInterface;
+use Hexactyl\\Contracts\Repository\LocationRepositoryInterface;
+use Hexactyl\\Contracts\Repository\ScheduleRepositoryInterface;
+use Hexactyl\\Contracts\Repository\SettingsRepositoryInterface;
+use Hexactyl\\Contracts\Repository\AllocationRepositoryInterface;
+use Hexactyl\\Contracts\Repository\EggVariableRepositoryInterface;
+use Hexactyl\\Contracts\Repository\DatabaseHostRepositoryInterface;
+use Hexactyl\\Contracts\Repository\ServerVariableRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

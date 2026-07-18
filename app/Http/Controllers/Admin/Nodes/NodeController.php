@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin\Nodes;
+namespace Hexactyl\\Http\Controllers\Admin\Nodes;
 
 use Illuminate\View\View;
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Node;
+use Hexactyl\\Models\Node;
 use Spatie\QueryBuilder\QueryBuilder;
-use Pterodactyl\Http\Controllers\Controller;
+use Hexactyl\\Http\Controllers\Controller;
 
 class NodeController extends Controller
 {

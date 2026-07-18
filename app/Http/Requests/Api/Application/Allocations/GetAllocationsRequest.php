@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Allocations;
+namespace Hexactyl\\Http\Requests\Api\Application\Allocations;
 
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Hexactyl\\Services\Acl\Api\AdminAcl;
+use Hexactyl\\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class GetAllocationsRequest extends ApplicationApiRequest
 {

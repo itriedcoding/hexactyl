@@ -1,18 +1,18 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Hexactyl\\Transformers\Api\Client;
 
-use Pterodactyl\Models\Egg;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Subuser;
+use Hexactyl\\Models\Egg;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Subuser;
 use League\Fractal\Resource\Item;
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Models\Permission;
+use Hexactyl\\Models\Allocation;
+use Hexactyl\\Models\Permission;
 use Illuminate\Container\Container;
-use Pterodactyl\Models\EggVariable;
+use Hexactyl\\Models\EggVariable;
 use League\Fractal\Resource\Collection;
 use League\Fractal\Resource\NullResource;
-use Pterodactyl\Services\Servers\StartupCommandService;
+use Hexactyl\\Services\Servers\StartupCommandService;
 
 class ServerTransformer extends BaseClientTransformer
 {
@@ -38,11 +38,11 @@ class ServerTransformer extends BaseClientTransformer
 
         return [
             'server_owner' => $user->id === $server->owner_id,
-            'identifier' => config('pterodactyl.features.new_server_identifiers')
+            'identifier' => config('Hexactyl.features.new_server_identifiers')
                 ? $server->identifier
                 : $server->uuidShort,
             '__deprecated_uuid_short' => $server->uuidShort,
-            // In Pterodactyl 2.0 we'll be replacing `identifier` above with the actual
+            // In Hexactyl 2.0 we'll be replacing `identifier` above with the actual
             // "identifier" used internally. This is a completely different value compared
             // to the current however, and would be quite a breaking change to URLs.
             'server_identifier' => $server->identifier,
@@ -85,7 +85,7 @@ class ServerTransformer extends BaseClientTransformer
     /**
      * Returns the allocations associated with this server.
      *
-     * @throws \Pterodactyl\Exceptions\Transformer\InvalidTransformerLevelException
+     * @throws \Hexactyl\\Exceptions\Transformer\InvalidTransformerLevelException
      */
     public function includeAllocations(Server $server): Collection
     {
@@ -110,7 +110,7 @@ class ServerTransformer extends BaseClientTransformer
     }
 
     /**
-     * @throws \Pterodactyl\Exceptions\Transformer\InvalidTransformerLevelException
+     * @throws \Hexactyl\\Exceptions\Transformer\InvalidTransformerLevelException
      */
     public function includeVariables(Server $server): Collection|NullResource
     {
@@ -128,7 +128,7 @@ class ServerTransformer extends BaseClientTransformer
     /**
      * Returns the egg associated with this server.
      *
-     * @throws \Pterodactyl\Exceptions\Transformer\InvalidTransformerLevelException
+     * @throws \Hexactyl\\Exceptions\Transformer\InvalidTransformerLevelException
      */
     public function includeEgg(Server $server): Item
     {
@@ -138,7 +138,7 @@ class ServerTransformer extends BaseClientTransformer
     /**
      * Returns the subusers associated with this server.
      *
-     * @throws \Pterodactyl\Exceptions\Transformer\InvalidTransformerLevelException
+     * @throws \Hexactyl\\Exceptions\Transformer\InvalidTransformerLevelException
      */
     public function includeSubusers(Server $server): Collection|NullResource
     {

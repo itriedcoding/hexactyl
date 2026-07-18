@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Services\Users;
+namespace Hexactyl\\Tests\Integration\Services\Users;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Subuser;
+use Hexactyl\\Models\User;
+use Hexactyl\\Models\Subuser;
 use Illuminate\Support\Facades\Bus;
-use Pterodactyl\Jobs\RevokeSftpAccessJob;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Services\Users\UserDeletionService;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
+use Hexactyl\\Jobs\RevokeSftpAccessJob;
+use Hexactyl\\Exceptions\DisplayException;
+use Hexactyl\\Services\Users\UserDeletionService;
+use Hexactyl\\Tests\Integration\IntegrationTestCase;
 
 class UserDeletionServiceTest extends IntegrationTestCase
 {

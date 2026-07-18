@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Jobs;
+namespace Hexactyl\\Jobs;
 
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\Server;
+use Hexactyl\\Models\Node;
+use Hexactyl\\Models\Server;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Queue\Attributes\WithoutRelations;
 use Illuminate\Queue\Attributes\DeleteWhenMissingModels;
-use Pterodactyl\Repositories\Wings\DaemonRevocationRepository;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Hexactyl\\Repositories\Wings\DaemonRevocationRepository;
+use Hexactyl\\Exceptions\Http\Connection\DaemonConnectionException;
 
 /**
  * Revokes all SFTP access for a user on a given node or for a specific server.

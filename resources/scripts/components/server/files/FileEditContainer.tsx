@@ -21,7 +21,7 @@ import { encodePathSegments, hashToPath } from '@/helpers';
 import { dirname } from 'pathe';
 import CodemirrorEditor from '@/components/elements/CodemirrorEditor';
 
-const getNewFileDraftKey = (uuid: string, directory: string) => `pterodactyl:new-file:${uuid}:${directory}`;
+const getNewFileDraftKey = (uuid: string, directory: string) => `hexactyl:new-file:${uuid}:${directory}`;
 
 export default () => {
     const [error, setError] = useState('');

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Console\Commands\Overrides;
+namespace Hexactyl\\Console\Commands\Overrides;
 
-use Pterodactyl\Console\RequiresDatabaseMigrations;
+use Hexactyl\\Console\RequiresDatabaseMigrations;
 use Illuminate\Foundation\Console\UpCommand as BaseUpCommand;
 
 class UpCommand extends BaseUpCommand

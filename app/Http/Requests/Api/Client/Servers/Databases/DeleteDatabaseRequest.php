@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Databases;
+namespace Hexactyl\\Http\Requests\Api\Client\Servers\Databases;
 
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Contracts\Http\ClientPermissionsRequest;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Hexactyl\\Models\Permission;
+use Hexactyl\\Contracts\Http\ClientPermissionsRequest;
+use Hexactyl\\Http\Requests\Api\Client\ClientApiRequest;
 
 class DeleteDatabaseRequest extends ClientApiRequest implements ClientPermissionsRequest
 {

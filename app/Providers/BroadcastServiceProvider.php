@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Providers;
+namespace Hexactyl\\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;

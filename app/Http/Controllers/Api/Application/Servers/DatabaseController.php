@@ -1,19 +1,19 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Servers;
+namespace Hexactyl\\Http\Controllers\Api\Application\Servers;
 
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Database;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Database;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Services\Databases\DatabasePasswordService;
-use Pterodactyl\Services\Databases\DatabaseManagementService;
-use Pterodactyl\Transformers\Api\Application\ServerDatabaseTransformer;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
-use Pterodactyl\Http\Requests\Api\Application\Servers\Databases\GetServerDatabaseRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\Databases\GetServerDatabasesRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\Databases\ServerDatabaseWriteRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\Databases\StoreServerDatabaseRequest;
+use Hexactyl\\Services\Databases\DatabasePasswordService;
+use Hexactyl\\Services\Databases\DatabaseManagementService;
+use Hexactyl\\Transformers\Api\Application\ServerDatabaseTransformer;
+use Hexactyl\\Http\Controllers\Api\Application\ApplicationApiController;
+use Hexactyl\\Http\Requests\Api\Application\Servers\Databases\GetServerDatabaseRequest;
+use Hexactyl\\Http\Requests\Api\Application\Servers\Databases\GetServerDatabasesRequest;
+use Hexactyl\\Http\Requests\Api\Application\Servers\Databases\ServerDatabaseWriteRequest;
+use Hexactyl\\Http\Requests\Api\Application\Servers\Databases\StoreServerDatabaseRequest;
 
 class DatabaseController extends ApplicationApiController
 {

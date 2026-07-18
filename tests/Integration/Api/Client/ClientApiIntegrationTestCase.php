@@ -1,23 +1,23 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client;
+namespace Hexactyl\\Tests\Integration\Api\Client;
 
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\Task;
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Model;
-use Pterodactyl\Models\Backup;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Database;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Models\Schedule;
+use Hexactyl\\Models\Node;
+use Hexactyl\\Models\Task;
+use Hexactyl\\Models\User;
+use Hexactyl\\Models\Model;
+use Hexactyl\\Models\Backup;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Database;
+use Hexactyl\\Models\Location;
+use Hexactyl\\Models\Schedule;
 use Illuminate\Support\Collection;
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Models\DatabaseHost;
-use Pterodactyl\Tests\Integration\TestResponse;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
+use Hexactyl\\Models\Allocation;
+use Hexactyl\\Models\DatabaseHost;
+use Hexactyl\\Tests\Integration\TestResponse;
+use Hexactyl\\Tests\Integration\IntegrationTestCase;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
-use Pterodactyl\Transformers\Api\Client\BaseClientTransformer;
+use Hexactyl\\Transformers\Api\Client\BaseClientTransformer;
 
 abstract class ClientApiIntegrationTestCase extends IntegrationTestCase
 {
@@ -87,7 +87,7 @@ abstract class ClientApiIntegrationTestCase extends IntegrationTestCase
     protected function assertJsonTransformedWith(array $data, Model|EloquentModel $model)
     {
         $reflect = new \ReflectionClass($model);
-        $transformer = sprintf('\\Pterodactyl\\Transformers\\Api\\Client\\%sTransformer', $reflect->getShortName());
+        $transformer = sprintf('\\Hexactyl\\\Transformers\\Api\\Client\\%sTransformer', $reflect->getShortName());
 
         $transformer = new $transformer();
         $this->assertInstanceOf(BaseClientTransformer::class, $transformer);

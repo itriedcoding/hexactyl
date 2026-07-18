@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Databases;
+namespace Hexactyl\\Http\Requests\Api\Client\Servers\Databases;
 
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Hexactyl\\Models\Permission;
+use Hexactyl\\Http\Requests\Api\Client\ClientApiRequest;
 
 class RotatePasswordRequest extends ClientApiRequest
 {

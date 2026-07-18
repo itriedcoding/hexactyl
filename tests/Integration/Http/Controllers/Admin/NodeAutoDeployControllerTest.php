@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Http\Controllers\Admin;
+namespace Hexactyl\\Tests\Integration\Http\Controllers\Admin;
 
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\ApiKey;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Tests\Integration\Http\HttpTestCase;
+use Hexactyl\\Models\Node;
+use Hexactyl\\Models\User;
+use Hexactyl\\Models\ApiKey;
+use Hexactyl\\Models\Location;
+use Hexactyl\\Services\Acl\Api\AdminAcl;
+use Hexactyl\\Tests\Integration\Http\HttpTestCase;
 
 class NodeAutoDeployControllerTest extends HttpTestCase
 {

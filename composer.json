@@ -1,19 +1,24 @@
 {
-    "name": "pterodactyl/panel",
-    "description": "The free, open-source game management panel. Supporting Minecraft, Spigot, BungeeCord, and SRCDS servers.",
+    "name": "hexactyl/panel",
+    "description": "The next-generation, open-source game server management panel. Enhanced with modern features and a fresh identity.",
     "license": "MIT",
     "authors": [
         {
+            "name": "itriedcoding",
+            "homepage": "https://github.com/itriedcoding",
+            "role": "Maintainer"
+        },
+        {
             "name": "Matthew Penner",
-            "email": "matthew@pterodactyl.io",
+            "email": "matthew@Hexactyl.io",
             "homepage": "https://github.com/matthewpi",
-            "role": "Lead Developer"
+            "role": "Original Lead Developer"
         },
         {
             "name": "Dane Everitt",
             "email": "dane@daneeveritt.com",
             "homepage": "https://github.com/DaneEveritt",
-            "role": "Developer"
+            "role": "Original Developer"
         }
     ],
     "require": {
@@ -70,14 +75,14 @@
             "app/helpers.php"
         ],
         "psr-4": {
-            "Pterodactyl\\": "app/",
+            "Hexactyl\\": "app/",
             "Database\\Factories\\": "database/Factories/",
             "Database\\Seeders\\": "database/Seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Pterodactyl\\Tests\\": "tests/"
+            "Hexactyl\\Tests\\": "tests/"
         }
     },
     "scripts": {

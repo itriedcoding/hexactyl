@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Http;
+namespace Hexactyl\\Tests\Integration\Http;
 
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
+use Hexactyl\\Tests\Integration\IntegrationTestCase;
 
 abstract class HttpTestCase extends IntegrationTestCase
 {

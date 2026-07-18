@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client\Server;
+namespace Hexactyl\\Tests\Integration\Api\Client\Server;
 
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Permission;
+use Hexactyl\\Repositories\Wings\DaemonServerRepository;
+use Hexactyl\\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
 
 class SettingsControllerTest extends ClientApiIntegrationTestCase
 {

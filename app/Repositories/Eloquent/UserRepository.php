@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Repositories\Eloquent;
+namespace Hexactyl\\Repositories\Eloquent;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Contracts\Repository\UserRepositoryInterface;
+use Hexactyl\\Models\User;
+use Hexactyl\\Contracts\Repository\UserRepositoryInterface;
 
 class UserRepository extends EloquentRepository implements UserRepositoryInterface
 {

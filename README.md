@@ -1,72 +1,123 @@
-[![Logo Image](https://cdn.pterodactyl.io/logos/new/pterodactyl_logo.png)](https://pterodactyl.io)
+# Hexactyl Panel
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/pterodactyl/panel/ci.yaml?label=Tests&style=for-the-badge&branch=1.0-develop)
-![Discord](https://img.shields.io/discord/122900397965705216?label=Discord&logo=Discord&logoColor=white&style=for-the-badge)
-![GitHub Releases](https://img.shields.io/github/downloads/pterodactyl/panel/latest/total?style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/pterodactyl/panel?style=for-the-badge)
+**The Next-Generation Game Server Management Panel**
 
-# Pterodactyl Panel
+Hexactyl is a free, open-source game server management panel built with PHP, React, and Go. Designed with security, performance, and flexibility in mind, Hexactyl runs all game servers in isolated Docker containers while exposing a beautiful and intuitive UI to end users.
 
-Pterodactyl® is a free, open-source game server management panel built with PHP, React, and Go. Designed with security
-in mind, Pterodactyl runs all game servers in isolated Docker containers while exposing a beautiful and intuitive
-UI to end users.
+> Built on the foundation of Hexactyl, enhanced with modern features and a fresh identity.
 
-Stop settling for less. Make game servers a first class citizen on your platform.
+## Features
 
-![Image](https://cdn.pterodactyl.io/site-assets/pterodactyl_v1_demo.gif)
+### Core Features
+- **Docker Isolation** - Run game servers in completely isolated containers
+- **Multi-Node Support** - Manage servers across multiple physical machines
+- **Real-Time Console** - Live server console with xterm.js integration
+- **File Manager** - Full-featured web-based file editor and manager
+- **Database Management** - MySQL/MariaDB database creation and management
+- **Backup System** - Automated and manual backup support with S3 compatibility
+- **SFTP Access** - Secure file transfer with per-server credentials
+- **User Management** - Multi-user support with granular permissions
+- **API Access** - Full REST API for external integrations
+- **Activity Logging** - Complete audit trail of all admin and user actions
+
+### Enhanced Features (Hexactyl Exclusive)
+- **Modern UI/UX** - Refreshed interface with improved navigation and responsiveness
+- **Server Templates** - Pre-configured templates for quick server deployment
+- **Advanced Monitoring** - Enhanced resource usage tracking and alerts
+- **Theme Support** - Customizable panel appearance with dark/light modes
+- **Quick Actions** - Streamlined server management workflows
+- **Improved Search** - Global search across servers, users, and settings
+- **Dashboard Analytics** - Server usage statistics and insights
+- **Mobile Optimized** - Fully responsive design for mobile management
+- **Performance Improvements** - Optimized codebase for faster load times
+- **Security Enhancements** - Additional security features and hardening
+
+### Supported Games
+Hexactyl supports a wide variety of games including:
+
+- Minecraft (Paper, Spigot, Bungeecord, Waterfall, Purpur, Velocity)
+- Rust
+- Terraria
+- TeamSpeak
+- Counter-Strike 2
+- Garry's Mod
+- ARK: Survival Evolved
+- Valheim
+- Factorio
+- And many more...
+
+## Requirements
+
+- PHP 8.2+
+- MySQL 5.7+ / MariaDB 10.2+
+- Redis
+- Docker
+- Node.js 18+
+- Web Server (Nginx/Apache)
+
+## Installation
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/itriedcoding/Hexactyl.git
+
+# Install PHP dependencies
+composer install
+
+# Install Node.js dependencies
+yarn install
+
+# Copy environment file
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+
+# Run database migrations
+php artisan migrate
+
+# Seed the database
+php artisan db:seed
+
+# Build frontend assets
+yarn build:production
+
+# Create admin user
+php artisan p:user:make
+```
+
+### Docker Installation
+
+```bash
+# Using Docker Compose
+docker-compose up -d
+```
 
 ## Documentation
 
-* [Panel Documentation](https://pterodactyl.io/panel/1.0/getting_started.html)
-* [Wings Documentation](https://pterodactyl.io/wings/1.0/installing.html)
-* [Community Guides](https://pterodactyl.io/community/about.html)
-* Or, get additional help [via Discord](https://discord.gg/pterodactyl)
+- [Panel Documentation](https://hexactyl.io/panel/getting_started.html)
+- [Wings Documentation](https://hexactyl.io/wings/installing.html)
+- [API Documentation](https://hexactyl.io/api/)
+- [Community Guides](https://hexactyl.io/community/)
 
-## Sponsors
+## Contributing
 
-I would like to extend my sincere thanks to the following sponsors for helping fund Pterodactyl's development.
-[Interested in becoming a sponsor?](https://github.com/sponsors/pterodactyl)
-
-| Company                                                                           | About                                                                                                                                                                                                                                           |
-|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aussie Server Hosts**](https://aussieserverhosts.com/)                         | No frills Australian Owned and operated High Performance Server hosting for some of the most demanding games serving Australia and New Zealand.                                                                                                 |
-| [**BisectHosting**](https://www.bisecthosting.com/)                               | BisectHosting provides Minecraft, Valheim and other server hosting services with the highest reliability and lightning fast support since 2012.                                                                                                 |
-| [**MineStrator**](https://minestrator.com/)                                       | Looking for the most highend French hosting company for your minecraft server? More than 24,000 members on our discord trust us. Give us a try!                                                                                                 |
-| [**HostEZ**](https://hostez.io)                                                   | US & EU Rust & Minecraft Hosting. DDoS Protected bare metal, VPS and colocation with low latency, high uptime and maximum availability. EZ!                                                                                                     |
-| [**Blueprint**](https://blueprint.zip/?utm_source=pterodactyl&utm_medium=sponsor) | Create and install Pterodactyl addons and themes with the growing Blueprint framework - the package-manager for Pterodactyl. Use multiple modifications at once without worrying about conflicts and make use of the large extension ecosystem. |
-| [**indifferent broccoli**](https://indifferentbroccoli.com/)                      | indifferent broccoli is a game server hosting and rental company. With us, you get top-notch computer power for your gaming sessions. We destroy lag, latency, and complexity--letting you focus on the fun stuff.                              |
-
-### Supported Games
-
-Pterodactyl supports a wide variety of games by utilizing Docker containers to isolate each instance. This gives
-you the power to run game servers without bloating machines with a host of additional dependencies.
-
-Some of our core supported games include:
-
-* Minecraft — including Paper, Sponge, Bungeecord, Waterfall, and more
-* Rust
-* Terraria
-* Teamspeak
-* Mumble
-* Team Fortress 2
-* Counter Strike: Global Offensive
-* Garry's Mod
-* ARK: Survival Evolved
-
-In addition to our standard nest of supported games, our community is constantly pushing the limits of this software
-and there are plenty more games available provided by the community. Some of these games include:
-
-* Factorio
-* San Andreas: MP
-* Pocketmine MP
-* Squad
-* Xonotic
-* Starmade
-* Discord ATLBot, and most other Node.js/Python discord bots
-* [and many more...](https://pterodactyleggs.com)
+Contributions are welcome! Please read our contributing guidelines before submitting PRs.
 
 ## License
 
-Pterodactyl® Copyright © 2015 - 2022 Dane Everitt and contributors.
+Hexactyl is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for details.
 
-Code released under the [MIT License](./LICENSE.md).
+Based on [Hexactyl Panel](https://github.com/Hexactyl/panel) by Dane Everitt and contributors.
+
+## Credits
+
+- Original Hexactyl Panel by Dane Everitt and contributors
+- Hexactyl maintained by [itriedcoding](https://github.com/itriedcoding)
+
+## Support
+
+- [GitHub Issues](https://github.com/itriedcoding/Hexactyl/issues)
+- [Discord Community](https://discord.gg/hexactyl)

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Schedules;
+namespace Hexactyl\\Http\Requests\Api\Client\Servers\Schedules;
 
-use Pterodactyl\Models\Permission;
+use Hexactyl\\Models\Permission;
 
 class UpdateScheduleRequest extends StoreScheduleRequest
 {

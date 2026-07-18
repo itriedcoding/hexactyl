@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Hexactyl\\Transformers\Api\Client;
 
 use Illuminate\Support\Arr;
 

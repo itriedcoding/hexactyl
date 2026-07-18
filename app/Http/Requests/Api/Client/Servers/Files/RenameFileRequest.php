@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Files;
+namespace Hexactyl\\Http\Requests\Api\Client\Servers\Files;
 
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Contracts\Http\ClientPermissionsRequest;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Hexactyl\\Models\Permission;
+use Hexactyl\\Contracts\Http\ClientPermissionsRequest;
+use Hexactyl\\Http\Requests\Api\Client\ClientApiRequest;
 
 class RenameFileRequest extends ClientApiRequest implements ClientPermissionsRequest
 {

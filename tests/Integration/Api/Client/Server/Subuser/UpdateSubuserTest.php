@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client\Server\Subuser;
+namespace Hexactyl\\Tests\Integration\Api\Client\Server\Subuser;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Subuser;
-use Pterodactyl\Models\Permission;
+use Hexactyl\\Models\User;
+use Hexactyl\\Models\Subuser;
+use Hexactyl\\Models\Permission;
 use Illuminate\Support\Facades\Bus;
-use Pterodactyl\Jobs\RevokeSftpAccessJob;
-use Pterodactyl\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
+use Hexactyl\\Jobs\RevokeSftpAccessJob;
+use Hexactyl\\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
 
 class UpdateSubuserTest extends ClientApiIntegrationTestCase
 {

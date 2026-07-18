@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Hexactyl\\Transformers\Api\Client;
 
-use Pterodactyl\Models\Database;
+use Hexactyl\\Models\Database;
 use League\Fractal\Resource\Item;
-use Pterodactyl\Models\Permission;
+use Hexactyl\\Models\Permission;
 use League\Fractal\Resource\NullResource;
 use Illuminate\Contracts\Encryption\Encrypter;
-use Pterodactyl\Contracts\Extensions\HashidsInterface;
+use Hexactyl\\Contracts\Extensions\HashidsInterface;
 
 class DatabaseTransformer extends BaseClientTransformer
 {

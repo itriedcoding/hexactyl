@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Services\Schedules;
+namespace Hexactyl\\Services\Schedules;
 
 use Exception;
-use Pterodactyl\Models\Schedule;
+use Hexactyl\\Models\Schedule;
 use Illuminate\Contracts\Bus\Dispatcher;
-use Pterodactyl\Jobs\Schedule\RunTaskJob;
+use Hexactyl\\Jobs\Schedule\RunTaskJob;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Hexactyl\\Exceptions\DisplayException;
+use Hexactyl\\Repositories\Wings\DaemonServerRepository;
+use Hexactyl\\Exceptions\Http\Connection\DaemonConnectionException;
 
 class ProcessScheduleService
 {
@@ -73,7 +73,7 @@ class ProcessScheduleService
             // When using dispatchNow the RunTaskJob::failed() function is not called automatically
             // so we need to manually trigger it and then continue with the exception throw.
             //
-            // @see https://github.com/pterodactyl/panel/issues/2550
+            // @see https://github.com/Hexactyl/panel/issues/2550
             try {
                 $this->dispatcher->dispatchNow($job);
             } catch (\Exception $exception) {

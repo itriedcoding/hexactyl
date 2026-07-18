@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Users;
+namespace Hexactyl\\Http\Requests\Api\Application\Users;
 
-use Pterodactyl\Models\User;
+use Hexactyl\\Models\User;
 
 class UpdateUserRequest extends StoreUserRequest
 {

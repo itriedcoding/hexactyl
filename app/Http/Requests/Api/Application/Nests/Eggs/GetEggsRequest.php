@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Nests\Eggs;
+namespace Hexactyl\\Http\Requests\Api\Application\Nests\Eggs;
 
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Hexactyl\\Services\Acl\Api\AdminAcl;
+use Hexactyl\\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class GetEggsRequest extends ApplicationApiRequest
 {

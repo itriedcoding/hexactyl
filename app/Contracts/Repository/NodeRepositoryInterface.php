@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Contracts\Repository;
+namespace Hexactyl\\Contracts\Repository;
 
-use Pterodactyl\Models\Node;
+use Hexactyl\\Models\Node;
 use Illuminate\Support\Collection;
 
 interface NodeRepositoryInterface extends RepositoryInterface

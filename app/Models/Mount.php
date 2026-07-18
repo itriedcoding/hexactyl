@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Hexactyl\\Models;
 
 use Illuminate\Validation\Rules\NotIn;
-use Pterodactyl\Contracts\Models\Identifiable;
-use Pterodactyl\Models\Traits\HasRealtimeIdentifier;
+use Hexactyl\\Contracts\Models\Identifiable;
+use Hexactyl\\Models\Traits\HasRealtimeIdentifier;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
@@ -16,9 +16,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property string $target
  * @property bool $read_only
  * @property bool $user_mountable
- * @property \Pterodactyl\Models\Egg[]|\Illuminate\Database\Eloquent\Collection $eggs
- * @property \Pterodactyl\Models\Node[]|\Illuminate\Database\Eloquent\Collection $nodes
- * @property \Pterodactyl\Models\Server[]|\Illuminate\Database\Eloquent\Collection $servers
+ * @property \Hexactyl\\Models\Egg[]|\Illuminate\Database\Eloquent\Collection $eggs
+ * @property \Hexactyl\\Models\Node[]|\Illuminate\Database\Eloquent\Collection $nodes
+ * @property \Hexactyl\\Models\Server[]|\Illuminate\Database\Eloquent\Collection $servers
  */
 #[Attributes\Identifiable('moun')]
 class Mount extends Model implements Identifiable
@@ -85,8 +85,8 @@ class Mount extends Model implements Identifiable
      * Blacklisted source paths.
      */
     public static $invalidSourcePaths = [
-        '/etc/pterodactyl',
-        '/var/lib/pterodactyl/volumes',
+        '/etc/Hexactyl',
+        '/var/lib/Hexactyl/volumes',
         '/srv/daemon-data',
     ];
 
@@ -100,7 +100,7 @@ class Mount extends Model implements Identifiable
     /**
      * Returns all eggs that have this mount assigned.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Pterodactyl\Models\Egg, $this>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Hexactyl\\Models\Egg, $this>
      */
     public function eggs(): BelongsToMany
     {
@@ -110,7 +110,7 @@ class Mount extends Model implements Identifiable
     /**
      * Returns all nodes that have this mount assigned.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Pterodactyl\Models\Node, $this>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Hexactyl\\Models\Node, $this>
      */
     public function nodes(): BelongsToMany
     {
@@ -120,7 +120,7 @@ class Mount extends Model implements Identifiable
     /**
      * Returns all servers that have this mount assigned.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Pterodactyl\Models\Server, $this>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Hexactyl\\Models\Server, $this>
      */
     public function servers(): BelongsToMany
     {

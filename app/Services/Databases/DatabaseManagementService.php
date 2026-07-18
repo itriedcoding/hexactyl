@@ -1,17 +1,17 @@
 <?php
 
-namespace Pterodactyl\Services\Databases;
+namespace Hexactyl\\Services\Databases;
 
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Database;
-use Pterodactyl\Helpers\Utilities;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Database;
+use Hexactyl\\Helpers\Utilities;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Contracts\Encryption\Encrypter;
-use Pterodactyl\Extensions\DynamicDatabaseConnection;
-use Pterodactyl\Repositories\Eloquent\DatabaseRepository;
-use Pterodactyl\Exceptions\Repository\DuplicateDatabaseNameException;
-use Pterodactyl\Exceptions\Service\Database\TooManyDatabasesException;
-use Pterodactyl\Exceptions\Service\Database\DatabaseClientFeatureNotEnabledException;
+use Hexactyl\\Extensions\DynamicDatabaseConnection;
+use Hexactyl\\Repositories\Eloquent\DatabaseRepository;
+use Hexactyl\\Exceptions\Repository\DuplicateDatabaseNameException;
+use Hexactyl\\Exceptions\Service\Database\TooManyDatabasesException;
+use Hexactyl\\Exceptions\Service\Database\DatabaseClientFeatureNotEnabledException;
 
 class DatabaseManagementService
 {
@@ -19,7 +19,7 @@ class DatabaseManagementService
      * The regex used to validate that the database name passed through to the function is
      * in the expected format.
      *
-     * @see \Pterodactyl\Services\Databases\DatabaseManagementService::generateUniqueDatabaseName()
+     * @see \Hexactyl\\Services\Databases\DatabaseManagementService::generateUniqueDatabaseName()
      */
     private const MATCH_NAME_REGEX = '/^(s[\d]+_)(.*)$/';
 
@@ -70,7 +70,7 @@ class DatabaseManagementService
      */
     public function create(Server $server, array $data): Database
     {
-        if (!config('pterodactyl.client_features.databases.enabled')) {
+        if (!config('Hexactyl.client_features.databases.enabled')) {
             throw new DatabaseClientFeatureNotEnabledException();
         }
 
@@ -118,7 +118,7 @@ class DatabaseManagementService
         } catch (\Exception $exception) {
             try {
                 // This is actually incorrect, it can be null in the case that the $database model
-                // itself isn't able to be created in Pterodactyl's database.
+                // itself isn't able to be created in Hexactyl's database.
                 //
                 // @phpstan-ignore-next-line instanceof.alwaysFalse
                 if ($database instanceof Database) {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Services\Servers;
+namespace Hexactyl\\Services\Servers;
 
 use Illuminate\Support\Arr;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Jobs\RevokeSftpAccessJob;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Jobs\RevokeSftpAccessJob;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Traits\Services\ReturnsUpdatedModels;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Repositories\Wings\DaemonRevocationRepository;
+use Hexactyl\\Traits\Services\ReturnsUpdatedModels;
+use Hexactyl\\Repositories\Wings\DaemonServerRepository;
+use Hexactyl\\Repositories\Wings\DaemonRevocationRepository;
 
 class DetailsModificationService
 {

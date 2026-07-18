@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Remote;
+namespace Hexactyl\\Tests\Integration\Api\Remote;
 
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Models\ServerTransfer;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
+use Hexactyl\\Models\Node;
+use Hexactyl\\Models\Location;
+use Hexactyl\\Models\Allocation;
+use Hexactyl\\Models\ServerTransfer;
+use Hexactyl\\Tests\Integration\IntegrationTestCase;
 
 class ServerTransferControllerTest extends IntegrationTestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Hexactyl\\Models;
 
 use Ramsey\Uuid\Uuid;
 use Illuminate\Http\Request;
@@ -40,7 +40,7 @@ class AuditLog extends Model
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Pterodactyl\Models\User, $this>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hexactyl\\Models\User, $this>
      */
     public function user(): BelongsTo
     {
@@ -48,7 +48,7 @@ class AuditLog extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Pterodactyl\Models\Server, $this>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Hexactyl\\Models\Server, $this>
      */
     public function server(): BelongsTo
     {

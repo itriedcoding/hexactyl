@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Allocation;
+namespace Hexactyl\\Exceptions\Service\Allocation;
 
-use Pterodactyl\Exceptions\PterodactylException;
+use Hexactyl\\Exceptions\HexactylException;
 
-class AllocationDoesNotBelongToServerException extends PterodactylException
+class AllocationDoesNotBelongToServerException extends HexactylException
 {
 }

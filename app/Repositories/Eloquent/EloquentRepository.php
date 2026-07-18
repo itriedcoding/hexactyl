@@ -1,19 +1,19 @@
 <?php
 
-namespace Pterodactyl\Repositories\Eloquent;
+namespace Hexactyl\\Repositories\Eloquent;
 
 use Illuminate\Http\Request;
 use Webmozart\Assert\Assert;
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Pterodactyl\Repositories\Repository;
+use Hexactyl\\Repositories\Repository;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Pterodactyl\Contracts\Repository\RepositoryInterface;
-use Pterodactyl\Exceptions\Model\DataValidationException;
-use Pterodactyl\Exceptions\Repository\RecordNotFoundException;
+use Hexactyl\\Contracts\Repository\RepositoryInterface;
+use Hexactyl\\Exceptions\Model\DataValidationException;
+use Hexactyl\\Exceptions\Repository\RecordNotFoundException;
 
 abstract class EloquentRepository extends Repository implements RepositoryInterface
 {

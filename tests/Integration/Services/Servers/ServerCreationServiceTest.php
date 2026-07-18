@@ -1,24 +1,24 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Services\Servers;
+namespace Hexactyl\\Tests\Integration\Services\Servers;
 
 use Mockery\MockInterface;
-use Pterodactyl\Models\Egg;
+use Hexactyl\\Models\Egg;
 use GuzzleHttp\Psr7\Request;
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\User;
+use Hexactyl\\Models\Node;
+use Hexactyl\\Models\User;
 use GuzzleHttp\Psr7\Response;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Models\Allocation;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Location;
+use Hexactyl\\Models\Allocation;
 use Illuminate\Foundation\Testing\WithFaker;
 use GuzzleHttp\Exception\BadResponseException;
 use Illuminate\Validation\ValidationException;
-use Pterodactyl\Models\Objects\DeploymentObject;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
-use Pterodactyl\Services\Servers\ServerCreationService;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Hexactyl\\Models\Objects\DeploymentObject;
+use Hexactyl\\Tests\Integration\IntegrationTestCase;
+use Hexactyl\\Services\Servers\ServerCreationService;
+use Hexactyl\\Repositories\Wings\DaemonServerRepository;
+use Hexactyl\\Exceptions\Http\Connection\DaemonConnectionException;
 
 class ServerCreationServiceTest extends IntegrationTestCase
 {
@@ -37,7 +37,7 @@ class ServerCreationServiceTest extends IntegrationTestCase
 
         /* @noinspection PhpFieldAssignmentTypeMismatchInspection */
         $this->bungeecord = Egg::query()
-            ->where('author', 'support@pterodactyl.io')
+            ->where('author', 'support@Hexactyl.io')
             ->where('name', 'Bungeecord')
             ->firstOrFail();
 
@@ -65,7 +65,7 @@ class ServerCreationServiceTest extends IntegrationTestCase
             'location_id' => $location->id,
         ]);
 
-        /** @var \Pterodactyl\Models\Allocation[]|\Illuminate\Database\Eloquent\Collection $allocations */
+        /** @var \Hexactyl\\Models\Allocation[]|\Illuminate\Database\Eloquent\Collection $allocations */
         $allocations = Allocation::factory()->times(5)->create([
             'node_id' => $node->id,
         ]);

@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Listeners;
+namespace Hexactyl\\Listeners;
 
-use Pterodactyl\Models\Node;
-use Pterodactyl\Events\User\Deleting;
-use Pterodactyl\Jobs\RevokeSftpAccessJob;
+use Hexactyl\\Models\Node;
+use Hexactyl\\Events\User\Deleting;
+use Hexactyl\\Jobs\RevokeSftpAccessJob;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\Eloquent\Collection;
-use Pterodactyl\Events\User\PasswordChanged;
-use Pterodactyl\Extensions\Illuminate\Events\Contracts\SubscribesToEvents;
+use Hexactyl\\Events\User\PasswordChanged;
+use Hexactyl\\Extensions\Illuminate\Events\Contracts\SubscribesToEvents;
 
 class RevocationListener implements SubscribesToEvents
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Application;
+namespace Hexactyl\\Transformers\Api\Application;
 
 use Illuminate\Support\Arr;
-use Pterodactyl\Models\Egg;
-use Pterodactyl\Models\Nest;
-use Pterodactyl\Models\Server;
+use Hexactyl\\Models\Egg;
+use Hexactyl\\Models\Nest;
+use Hexactyl\\Models\Server;
 use League\Fractal\Resource\Item;
-use Pterodactyl\Models\EggVariable;
+use Hexactyl\\Models\EggVariable;
 use League\Fractal\Resource\Collection;
 use League\Fractal\Resource\NullResource;
-use Pterodactyl\Services\Acl\Api\AdminAcl;
+use Hexactyl\\Services\Acl\Api\AdminAcl;
 
 class EggTransformer extends BaseTransformer
 {
@@ -82,7 +82,7 @@ class EggTransformer extends BaseTransformer
     /**
      * Include the Nest relationship for the given Egg in the transformation.
      *
-     * @throws \Pterodactyl\Exceptions\Transformer\InvalidTransformerLevelException
+     * @throws \Hexactyl\\Exceptions\Transformer\InvalidTransformerLevelException
      */
     public function includeNest(Egg $model): Item|NullResource
     {
@@ -98,7 +98,7 @@ class EggTransformer extends BaseTransformer
     /**
      * Include the Servers relationship for the given Egg in the transformation.
      *
-     * @throws \Pterodactyl\Exceptions\Transformer\InvalidTransformerLevelException
+     * @throws \Hexactyl\\Exceptions\Transformer\InvalidTransformerLevelException
      */
     public function includeServers(Egg $model): Collection|NullResource
     {
@@ -158,7 +158,7 @@ class EggTransformer extends BaseTransformer
     /**
      * Include the variables that are defined for this Egg.
      *
-     * @throws \Pterodactyl\Exceptions\Transformer\InvalidTransformerLevelException
+     * @throws \Hexactyl\\Exceptions\Transformer\InvalidTransformerLevelException
      */
     public function includeVariables(Egg $model): Collection|NullResource
     {

@@ -1,39 +1,39 @@
 <?php
 
-namespace Pterodactyl\Http;
+namespace Hexactyl\\Http;
 
 use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Http\Middleware\HandleCors;
 use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Http\Middleware\TrustProxies;
-use Pterodactyl\Http\Middleware\TrimStrings;
+use Hexactyl\\Http\Middleware\TrimStrings;
 use Illuminate\Session\Middleware\StartSession;
-use Pterodactyl\Http\Middleware\EncryptCookies;
-use Pterodactyl\Http\Middleware\Api\IsValidJson;
-use Pterodactyl\Http\Middleware\VerifyCsrfToken;
-use Pterodactyl\Http\Middleware\VerifyReCaptcha;
+use Hexactyl\\Http\Middleware\EncryptCookies;
+use Hexactyl\\Http\Middleware\Api\IsValidJson;
+use Hexactyl\\Http\Middleware\VerifyCsrfToken;
+use Hexactyl\\Http\Middleware\VerifyReCaptcha;
 use Illuminate\Routing\Middleware\ThrottleRequests;
-use Pterodactyl\Http\Middleware\LanguageMiddleware;
-use Pterodactyl\Http\Middleware\SetSecurityHeaders;
+use Hexactyl\\Http\Middleware\LanguageMiddleware;
+use Hexactyl\\Http\Middleware\SetSecurityHeaders;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use Illuminate\Routing\Middleware\SubstituteBindings;
-use Pterodactyl\Http\Middleware\Activity\TrackAPIKey;
+use Hexactyl\\Http\Middleware\Activity\TrackAPIKey;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-use Pterodactyl\Http\Middleware\MaintenanceMiddleware;
-use Pterodactyl\Http\Middleware\EnsureStatefulRequests;
-use Pterodactyl\Http\Middleware\RedirectIfAuthenticated;
+use Hexactyl\\Http\Middleware\MaintenanceMiddleware;
+use Hexactyl\\Http\Middleware\EnsureStatefulRequests;
+use Hexactyl\\Http\Middleware\RedirectIfAuthenticated;
 use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
-use Pterodactyl\Http\Middleware\Api\AuthenticateIPAccess;
+use Hexactyl\\Http\Middleware\Api\AuthenticateIPAccess;
 use Illuminate\Foundation\Http\Middleware\ValidatePostSize;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
-use Pterodactyl\Http\Middleware\Api\Daemon\DaemonAuthenticate;
-use Pterodactyl\Http\Middleware\Api\Client\RequireClientApiKey;
-use Pterodactyl\Http\Middleware\RequireTwoFactorAuthentication;
+use Hexactyl\\Http\Middleware\Api\Daemon\DaemonAuthenticate;
+use Hexactyl\\Http\Middleware\Api\Client\RequireClientApiKey;
+use Hexactyl\\Http\Middleware\RequireTwoFactorAuthentication;
 use Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull;
-use Pterodactyl\Http\Middleware\Api\Client\SubstituteClientBindings;
+use Hexactyl\\Http\Middleware\Api\Client\SubstituteClientBindings;
 use Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance;
-use Pterodactyl\Http\Middleware\Api\Application\AuthenticateApplicationUser;
+use Hexactyl\\Http\Middleware\Api\Application\AuthenticateApplicationUser;
 
 class Kernel extends HttpKernel
 {

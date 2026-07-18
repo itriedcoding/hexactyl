@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin;
+namespace Hexactyl\\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\ApiKey;
+use Hexactyl\\Models\Node;
+use Hexactyl\\Models\ApiKey;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Http\Controllers\Controller;
+use Hexactyl\\Http\Controllers\Controller;
 use Illuminate\Contracts\Encryption\Encrypter;
-use Pterodactyl\Services\Api\KeyCreationService;
+use Hexactyl\\Services\Api\KeyCreationService;
 
 class NodeAutoDeployController extends Controller
 {
@@ -25,7 +25,7 @@ class NodeAutoDeployController extends Controller
      * Generates a new API key for the logged-in user with read and write permission
      * to nodes, and returns that as the deployment key for a node.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
+     * @throws \Hexactyl\\Exceptions\Model\DataValidationException
      */
     public function __invoke(Request $request, Node $node): JsonResponse
     {

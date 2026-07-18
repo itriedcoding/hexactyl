@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Facades;
+namespace Hexactyl\\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Pterodactyl\Services\Activity\ActivityLogBatchService;
+use Hexactyl\\Services\Activity\ActivityLogBatchService;
 
 class LogBatch extends Facade
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Egg\Variable;
+namespace Hexactyl\\Exceptions\Service\Egg\Variable;
 
-use Pterodactyl\Exceptions\DisplayException;
+use Hexactyl\\Exceptions\DisplayException;
 
 class ReservedVariableNameException extends DisplayException
 {

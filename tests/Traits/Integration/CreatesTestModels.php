@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Tests\Traits\Integration;
+namespace Hexactyl\\Tests\Traits\Integration;
 
 use Ramsey\Uuid\Uuid;
-use Pterodactyl\Models\Egg;
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Subuser;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Models\Allocation;
+use Hexactyl\\Models\Egg;
+use Hexactyl\\Models\Node;
+use Hexactyl\\Models\User;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Subuser;
+use Hexactyl\\Models\Location;
+use Hexactyl\\Models\Allocation;
 
 trait CreatesTestModels
 {
@@ -81,7 +81,7 @@ trait CreatesTestModels
      *
      * @param string[] $permissions
      *
-     * @return array{\Pterodactyl\Models\User, \Pterodactyl\Models\Server}
+     * @return array{\Hexactyl\\Models\User, \Hexactyl\\Models\Server}
      */
     public function generateTestAccount(array $permissions = []): array
     {
@@ -130,7 +130,7 @@ trait CreatesTestModels
     private function getBungeecordEgg(): Egg
     {
         /** @var Egg $egg */
-        $egg = Egg::query()->where('author', 'support@pterodactyl.io')->where('name', 'Bungeecord')->firstOrFail();
+        $egg = Egg::query()->where('author', 'support@Hexactyl.io')->where('name', 'Bungeecord')->firstOrFail();
 
         return $egg;
     }

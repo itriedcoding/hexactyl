@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Application\Location;
+namespace Hexactyl\\Tests\Integration\Api\Application\Location;
 
-use Pterodactyl\Models\Node;
+use Hexactyl\\Models\Node;
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Transformers\Api\Application\NodeTransformer;
-use Pterodactyl\Transformers\Api\Application\ServerTransformer;
-use Pterodactyl\Transformers\Api\Application\LocationTransformer;
-use Pterodactyl\Tests\Integration\Api\Application\ApplicationApiIntegrationTestCase;
+use Hexactyl\\Models\Location;
+use Hexactyl\\Transformers\Api\Application\NodeTransformer;
+use Hexactyl\\Transformers\Api\Application\ServerTransformer;
+use Hexactyl\\Transformers\Api\Application\LocationTransformer;
+use Hexactyl\\Tests\Integration\Api\Application\ApplicationApiIntegrationTestCase;
 
 class LocationControllerTest extends ApplicationApiIntegrationTestCase
 {

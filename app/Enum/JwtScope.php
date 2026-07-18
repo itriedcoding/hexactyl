@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Enum;
+namespace Hexactyl\\Enum;
 
 enum JwtScope: string
 {

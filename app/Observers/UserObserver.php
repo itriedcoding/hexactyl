@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Observers;
+namespace Hexactyl\\Observers;
 
-use Pterodactyl\Events;
-use Pterodactyl\Models\User;
+use Hexactyl\\Events;
+use Hexactyl\\Models\User;
 
 class UserObserver
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin;
+namespace Hexactyl\\Http\Controllers\Admin;
 
 use Illuminate\View\View;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Services\Helpers\SoftwareVersionService;
+use Hexactyl\\Http\Controllers\Controller;
+use Hexactyl\\Services\Helpers\SoftwareVersionService;
 
 class BaseController extends Controller
 {

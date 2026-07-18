@@ -1,11 +1,11 @@
 <?php
 
-namespace Pterodactyl\Console\Commands\Location;
+namespace Hexactyl\\Console\Commands\Location;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
-use Pterodactyl\Services\Locations\LocationDeletionService;
-use Pterodactyl\Contracts\Repository\LocationRepositoryInterface;
+use Hexactyl\\Services\Locations\LocationDeletionService;
+use Hexactyl\\Contracts\Repository\LocationRepositoryInterface;
 
 class DeleteLocationCommand extends Command
 {
@@ -28,8 +28,8 @@ class DeleteLocationCommand extends Command
     /**
      * Respond to the command request.
      *
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
-     * @throws \Pterodactyl\Exceptions\Service\Location\HasActiveNodesException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Service\Location\HasActiveNodesException
      */
     public function handle()
     {

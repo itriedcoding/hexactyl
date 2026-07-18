@@ -1,19 +1,19 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Servers;
+namespace Hexactyl\\Http\Controllers\Api\Application\Servers;
 
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Server;
+use Hexactyl\\Models\Server;
 use Illuminate\Http\JsonResponse;
 use Spatie\QueryBuilder\QueryBuilder;
-use Pterodactyl\Services\Servers\ServerCreationService;
-use Pterodactyl\Services\Servers\ServerDeletionService;
-use Pterodactyl\Transformers\Api\Application\ServerTransformer;
-use Pterodactyl\Http\Requests\Api\Application\Servers\GetServerRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\GetServersRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\ServerWriteRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\StoreServerRequest;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
+use Hexactyl\\Services\Servers\ServerCreationService;
+use Hexactyl\\Services\Servers\ServerDeletionService;
+use Hexactyl\\Transformers\Api\Application\ServerTransformer;
+use Hexactyl\\Http\Requests\Api\Application\Servers\GetServerRequest;
+use Hexactyl\\Http\Requests\Api\Application\Servers\GetServersRequest;
+use Hexactyl\\Http\Requests\Api\Application\Servers\ServerWriteRequest;
+use Hexactyl\\Http\Requests\Api\Application\Servers\StoreServerRequest;
+use Hexactyl\\Http\Controllers\Api\Application\ApplicationApiController;
 
 class ServerController extends ApplicationApiController
 {
@@ -47,11 +47,11 @@ class ServerController extends ApplicationApiController
      *
      * @throws \Throwable
      * @throws \Illuminate\Validation\ValidationException
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
-     * @throws \Pterodactyl\Exceptions\Service\Deployment\NoViableAllocationException
-     * @throws \Pterodactyl\Exceptions\Service\Deployment\NoViableNodeException
+     * @throws \Hexactyl\\Exceptions\DisplayException
+     * @throws \Hexactyl\\Exceptions\Model\DataValidationException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Service\Deployment\NoViableAllocationException
+     * @throws \Hexactyl\\Exceptions\Service\Deployment\NoViableNodeException
      */
     public function store(StoreServerRequest $request): JsonResponse
     {
@@ -75,7 +75,7 @@ class ServerController extends ApplicationApiController
     /**
      * Deletes a server.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Hexactyl\\Exceptions\DisplayException
      */
     public function delete(ServerWriteRequest $request, Server $server, string $force = ''): Response
     {

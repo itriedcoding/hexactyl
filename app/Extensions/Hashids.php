@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Extensions;
+namespace Hexactyl\\Extensions;
 
 use Illuminate\Support\Arr;
 use Hashids\Hashids as VendorHashids;
-use Pterodactyl\Contracts\Extensions\HashidsInterface;
+use Hexactyl\\Contracts\Extensions\HashidsInterface;
 
 class Hashids extends VendorHashids implements HashidsInterface
 {

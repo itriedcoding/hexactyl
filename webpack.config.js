@@ -144,8 +144,8 @@ module.exports = {
             options: process.env.USE_LOCAL_CERTS
                 ? {
                       ca: path.join(__dirname, '../../docker/certificates/root_ca.pem'),
-                      cert: path.join(__dirname, '../../docker/certificates/pterodactyl.test.pem'),
-                      key: path.join(__dirname, '../../docker/certificates/pterodactyl.test-key.pem'),
+                      cert: path.join(__dirname, '../../docker/certificates/Hexactyl.test.pem'),
+                      key: path.join(__dirname, '../../docker/certificates/Hexactyl.test-key.pem'),
                   }
                 : undefined,
         },
@@ -153,7 +153,7 @@ module.exports = {
             directory: path.join(__dirname, '/public'),
             publicPath: process.env.WEBPACK_PUBLIC_PATH || '/assets/',
         },
-        allowedHosts: ['.pterodactyl.test'],
+        allowedHosts: ['.Hexactyl.test'],
         headers: {
             'Access-Control-Allow-Origin': '*',
         },

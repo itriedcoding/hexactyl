@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Client\Servers;
+namespace Hexactyl\\Http\Controllers\Api\Client\Servers;
 
-use Pterodactyl\Models\Server;
-use Pterodactyl\Facades\Activity;
-use Pterodactyl\Services\Servers\StartupCommandService;
-use Pterodactyl\Repositories\Eloquent\ServerVariableRepository;
-use Pterodactyl\Transformers\Api\Client\EggVariableTransformer;
-use Pterodactyl\Http\Controllers\Api\Client\ClientApiController;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Facades\Activity;
+use Hexactyl\\Services\Servers\StartupCommandService;
+use Hexactyl\\Repositories\Eloquent\ServerVariableRepository;
+use Hexactyl\\Transformers\Api\Client\EggVariableTransformer;
+use Hexactyl\\Http\Controllers\Api\Client\ClientApiController;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Startup\GetStartupRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Startup\UpdateStartupVariableRequest;
+use Hexactyl\\Http\Requests\Api\Client\Servers\Startup\GetStartupRequest;
+use Hexactyl\\Http\Requests\Api\Client\Servers\Startup\UpdateStartupVariableRequest;
 
 class StartupController extends ClientApiController
 {
@@ -47,8 +47,8 @@ class StartupController extends ClientApiController
      * Updates a single variable for a server.
      *
      * @throws \Illuminate\Validation\ValidationException
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Model\DataValidationException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      */
     public function update(UpdateStartupVariableRequest $request, Server $server): array
     {

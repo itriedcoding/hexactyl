@@ -1,11 +1,11 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Application\Nodes;
+namespace Hexactyl\\Tests\Integration\Api\Application\Nodes;
 
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Tests\Integration\Api\Application\ApplicationApiIntegrationTestCase;
+use Hexactyl\\Models\Node;
+use Hexactyl\\Models\Location;
+use Hexactyl\\Services\Acl\Api\AdminAcl;
+use Hexactyl\\Tests\Integration\Api\Application\ApplicationApiIntegrationTestCase;
 
 class NodeConfigurationControllerTest extends ApplicationApiIntegrationTestCase
 {

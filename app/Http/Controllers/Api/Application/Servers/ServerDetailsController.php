@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Servers;
+namespace Hexactyl\\Http\Controllers\Api\Application\Servers;
 
-use Pterodactyl\Models\Server;
-use Pterodactyl\Services\Servers\BuildModificationService;
-use Pterodactyl\Services\Servers\DetailsModificationService;
-use Pterodactyl\Transformers\Api\Application\ServerTransformer;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
-use Pterodactyl\Http\Requests\Api\Application\Servers\UpdateServerDetailsRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\UpdateServerBuildConfigurationRequest;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Services\Servers\BuildModificationService;
+use Hexactyl\\Services\Servers\DetailsModificationService;
+use Hexactyl\\Transformers\Api\Application\ServerTransformer;
+use Hexactyl\\Http\Controllers\Api\Application\ApplicationApiController;
+use Hexactyl\\Http\Requests\Api\Application\Servers\UpdateServerDetailsRequest;
+use Hexactyl\\Http\Requests\Api\Application\Servers\UpdateServerBuildConfigurationRequest;
 
 class ServerDetailsController extends ApplicationApiController
 {
@@ -25,9 +25,9 @@ class ServerDetailsController extends ApplicationApiController
     /**
      * Update the details for a specific server.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\DisplayException
+     * @throws \Hexactyl\\Exceptions\Model\DataValidationException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      */
     public function details(UpdateServerDetailsRequest $request, Server $server): array
     {
@@ -44,9 +44,9 @@ class ServerDetailsController extends ApplicationApiController
     /**
      * Update the build details for a specific server.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\DisplayException
+     * @throws \Hexactyl\\Exceptions\Model\DataValidationException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      */
     public function build(UpdateServerBuildConfigurationRequest $request, Server $server): array
     {

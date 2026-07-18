@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Services\Eggs\Sharing;
+namespace Hexactyl\\Services\Eggs\Sharing;
 
 use Carbon\Carbon;
-use Pterodactyl\Models\Egg;
+use Hexactyl\\Models\Egg;
 use Illuminate\Support\Collection;
-use Pterodactyl\Models\EggVariable;
-use Pterodactyl\Contracts\Repository\EggRepositoryInterface;
+use Hexactyl\\Models\EggVariable;
+use Hexactyl\\Contracts\Repository\EggRepositoryInterface;
 
 class EggExporterService
 {
@@ -20,14 +20,14 @@ class EggExporterService
     /**
      * Return a JSON representation of an egg and its variables.
      *
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      */
     public function handle(int $egg): string
     {
         $egg = $this->repository->getWithExportAttributes($egg);
 
         $struct = [
-            '_comment' => 'DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO',
+            '_comment' => 'DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY Hexactyl PANEL - Hexactyl.IO',
             'meta' => [
                 'version' => Egg::EXPORT_VERSION,
                 'update_url' => $egg->update_url,

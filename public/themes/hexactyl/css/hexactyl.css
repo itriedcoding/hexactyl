@@ -1,5 +1,5 @@
 /**
- * Pterodactyl - Panel
+ * Hexactyl - Panel
  * Copyright (c) 2015 - 2017 Dane Everitt <dane@daneeveritt.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,45 +51,45 @@
     z-index: -1;
 }
 
-.pterodactyl-login-box {
+.Hexactyl-login-box {
     background: rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     padding: 20px;
 }
 
-.pterodactyl-login-input > input {
+.Hexactyl-login-input > input {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid #000;
     border-radius: 2px;
     color: #fff;
 }
 
-.pterodactyl-login-input > .form-control-feedback {
+.Hexactyl-login-input > .form-control-feedback {
     color: #fff;
 }
 
-.pterodactyl-login-button--main {
+.Hexactyl-login-button--main {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid #000;
     border-radius: 2px;
     color: #fff;
 }
 
-.pterodactyl-login-button--main:hover {
+.Hexactyl-login-button--main:hover {
     background: rgba(0, 0, 0, 0.7);
     border: 1px solid #000;
     border-radius: 2px;
     color: #fff;
 }
 
-.pterodactyl-login-button--left {
+.Hexactyl-login-button--left {
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 2px;
     color: #fff;
 }
 
-.pterodactyl-login-button--left:hover {
+.Hexactyl-login-button--left:hover {
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 2px;

@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Services\Servers;
+namespace Hexactyl\\Tests\Integration\Services\Servers;
 
-use Pterodactyl\Models\Egg;
-use Pterodactyl\Models\User;
+use Hexactyl\\Models\Egg;
+use Hexactyl\\Models\User;
 use Illuminate\Support\Collection;
 use Illuminate\Validation\ValidationException;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
-use Pterodactyl\Services\Servers\VariableValidatorService;
+use Hexactyl\\Tests\Integration\IntegrationTestCase;
+use Hexactyl\\Services\Servers\VariableValidatorService;
 
 class VariableValidatorServiceTest extends IntegrationTestCase
 {
@@ -19,7 +19,7 @@ class VariableValidatorServiceTest extends IntegrationTestCase
 
         /* @noinspection PhpFieldAssignmentTypeMismatchInspection */
         $this->egg = Egg::query()
-            ->where('author', 'support@pterodactyl.io')
+            ->where('author', 'support@Hexactyl.io')
             ->where('name', 'Bungeecord')
             ->firstOrFail();
     }

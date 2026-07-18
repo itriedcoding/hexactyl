@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration;
+namespace Hexactyl\\Tests\Integration;
 
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
-use Pterodactyl\Tests\TestCase;
+use Hexactyl\\Tests\TestCase;
 use Illuminate\Support\Facades\Event;
-use Pterodactyl\Events\ActivityLogged;
-use Pterodactyl\Tests\Assertions\AssertsActivityLogged;
-use Pterodactyl\Tests\Traits\Integration\CreatesTestModels;
-use Pterodactyl\Transformers\Api\Application\BaseTransformer;
+use Hexactyl\\Events\ActivityLogged;
+use Hexactyl\\Tests\Assertions\AssertsActivityLogged;
+use Hexactyl\\Tests\Traits\Integration\CreatesTestModels;
+use Hexactyl\\Transformers\Api\Application\BaseTransformer;
 
 abstract class IntegrationTestCase extends TestCase
 {

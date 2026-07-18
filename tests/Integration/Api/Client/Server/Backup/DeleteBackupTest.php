@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client\Server\Backup;
+namespace Hexactyl\\Tests\Integration\Api\Client\Server\Backup;
 
 use Mockery\MockInterface;
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Backup;
-use Pterodactyl\Models\Permission;
+use Hexactyl\\Models\Backup;
+use Hexactyl\\Models\Permission;
 use Illuminate\Support\Facades\Event;
-use Pterodactyl\Events\ActivityLogged;
-use Pterodactyl\Repositories\Wings\DaemonBackupRepository;
-use Pterodactyl\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
+use Hexactyl\\Events\ActivityLogged;
+use Hexactyl\\Repositories\Wings\DaemonBackupRepository;
+use Hexactyl\\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
 
 class DeleteBackupTest extends ClientApiIntegrationTestCase
 {

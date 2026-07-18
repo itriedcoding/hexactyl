@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Hexactyl\\Transformers\Api\Client;
 
-use Pterodactyl\Models\UserSSHKey;
+use Hexactyl\\Models\UserSSHKey;
 
 class UserSSHKeyTransformer extends BaseClientTransformer
 {

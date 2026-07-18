@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Allocation;
+use Hexactyl\\Models\Server;
+use Hexactyl\\Models\Allocation;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AllocationFactory extends Factory

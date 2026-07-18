@@ -1,18 +1,18 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Services\Servers;
+namespace Hexactyl\\Tests\Integration\Services\Servers;
 
 use Mockery\MockInterface;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
-use Pterodactyl\Models\Database;
-use Pterodactyl\Models\DatabaseHost;
+use Hexactyl\\Models\Database;
+use Hexactyl\\Models\DatabaseHost;
 use GuzzleHttp\Exception\BadResponseException;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
-use Pterodactyl\Services\Servers\ServerDeletionService;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Services\Databases\DatabaseManagementService;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Hexactyl\\Tests\Integration\IntegrationTestCase;
+use Hexactyl\\Services\Servers\ServerDeletionService;
+use Hexactyl\\Repositories\Wings\DaemonServerRepository;
+use Hexactyl\\Services\Databases\DatabaseManagementService;
+use Hexactyl\\Exceptions\Http\Connection\DaemonConnectionException;
 
 class ServerDeletionServiceTest extends IntegrationTestCase
 {

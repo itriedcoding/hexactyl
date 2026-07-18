@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin\Settings;
+namespace Hexactyl\\Http\Controllers\Admin\Settings;
 
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use Prologue\Alerts\AlertsMessageBag;
 use Illuminate\Contracts\Console\Kernel;
-use Pterodactyl\Http\Controllers\Controller;
+use Hexactyl\\Http\Controllers\Controller;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
-use Pterodactyl\Contracts\Repository\SettingsRepositoryInterface;
-use Pterodactyl\Http\Requests\Admin\Settings\AdvancedSettingsFormRequest;
+use Hexactyl\\Contracts\Repository\SettingsRepositoryInterface;
+use Hexactyl\\Http\Requests\Admin\Settings\AdvancedSettingsFormRequest;
 
 class AdvancedController extends Controller
 {
@@ -43,8 +43,8 @@ class AdvancedController extends Controller
     }
 
     /**
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Hexactyl\\Exceptions\Model\DataValidationException
+     * @throws \Hexactyl\\Exceptions\Repository\RecordNotFoundException
      */
     public function update(AdvancedSettingsFormRequest $request): RedirectResponse
     {

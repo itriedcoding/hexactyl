@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Http\Controllers\Admin\UserController;
+namespace Hexactyl\\Tests\Integration\Http\Controllers\Admin\UserController;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Tests\Integration\Http\HttpTestCase;
+use Hexactyl\\Models\User;
+use Hexactyl\\Tests\Integration\Http\HttpTestCase;
 
 class CreateUserTest extends HttpTestCase
 {
