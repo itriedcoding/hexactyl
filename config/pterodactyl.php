@@ -193,4 +193,49 @@ return [
     'features' => [
         'new_server_identifiers' => (bool) env('HEXACTYL_USE_SERVER_IDENTIFIERS', false),
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Theme Settings
+    |--------------------------------------------------------------------------
+    |
+    | Configure the available themes and the active theme for the panel.
+    */
+
+    'active_theme' => env('HEXACTYL_THEME', 'hexactyl'),
+
+    'themes' => [
+        'hexactyl' => [
+            'name' => 'Hexactyl',
+            'description' => 'Default Hexactyl theme',
+            'path' => 'hexactyl',
+        ],
+        'dark' => [
+            'name' => 'Dark',
+            'description' => 'Dark mode theme',
+            'path' => 'dark',
+        ],
+        'light' => [
+            'name' => 'Light',
+            'description' => 'Light mode theme',
+            'path' => 'light',
+        ],
+        'midnight' => [
+            'name' => 'Midnight',
+            'description' => 'Midnight blue theme',
+            'path' => 'midnight',
+        ],
+        'ocean' => [
+            'name' => 'Ocean',
+            'description' => 'Ocean-inspired blue theme',
+            'path' => 'ocean',
+        ],
+        'forest' => [
+            'name' => 'Forest',
+            'description' => 'Nature-inspired green theme',
+            'path' => 'forest',
+        ],
+    ],
+
+    'custom_css_enabled' => (bool) env('HEXACTYL_CUSTOM_CSS', false),
 ];

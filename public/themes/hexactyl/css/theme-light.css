@@ -1,0 +1,15 @@
+:root {
+    --hx-primary-color: #6d28d9;
+    --hx-bg-color: #f8fafc;
+    --hx-sidebar-color: #ffffff;
+    --hx-text-color: #1e293b;
+    --hx-accent-color: #8b5cf6;
+    --hx-success-color: #16a34a;
+    --hx-warning-color: #d97706;
+    --hx-danger-color: #dc2626;
+    --hx-border-color: #e2e8f0;
+    --hx-card-bg: #ffffff;
+    --hx-font-family: 'Inter', system-ui, sans-serif;
+}
+body { background-color: var(--hx-bg-color); color: var(--hx-text-color); }
+.hx-sidebar { background-color: var(--hx-sidebar-color); }

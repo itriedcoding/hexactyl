@@ -44,6 +44,13 @@ Route::prefix('/account')->middleware(AccountSubject::class)->group(function () 
         Route::post('/', [Client\SSHKeyController::class, 'store']);
         Route::post('/remove', [Client\SSHKeyController::class, 'delete']);
     });
+
+    // Theme routes - 5 available themes
+    Route::prefix('/theme')->group(function () {
+        Route::get('/', [Client\ThemeController::class, 'getThemes'])->name('api:client.account.themes');
+        Route::get('/current', [Client\ThemeController::class, 'getCurrentTheme'])->name('api:client.account.theme.current');
+        Route::put('/', [Client\ThemeController::class, 'setTheme'])->name('api:client.account.theme.set');
+    });
 });
 
 /*

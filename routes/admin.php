@@ -69,6 +69,13 @@ Route::group(['prefix' => 'settings'], function () {
     Route::get('/mail', [Admin\Settings\MailController::class, 'index'])->name('admin.settings.mail');
     Route::get('/advanced', [Admin\Settings\AdvancedController::class, 'index'])->name('admin.settings.advanced');
 
+    // Theme settings (5 themes: hexactyl, midnight, forest, sunset, light)
+    Route::get('/theme', [Admin\Settings\ThemeController::class, 'index'])->name('admin.settings.theme');
+    Route::put('/theme', [Admin\Settings\ThemeController::class, 'update'])->name('admin.settings.theme.update');
+    Route::get('/theme/preview/{theme}', [Admin\Settings\ThemeController::class, 'preview'])->name('admin.settings.theme.preview');
+    Route::get('/theme/css/{theme}', [Admin\Settings\ThemeController::class, 'css'])->name('admin.settings.theme.css');
+    Route::post('/theme/custom-css', [Admin\Settings\ThemeController::class, 'toggleCustomCss'])->name('admin.settings.theme.custom-css');
+
     Route::post('/mail/test', [Admin\Settings\MailController::class, 'test'])->name('admin.settings.mail.test');
 
     Route::patch('/', [Admin\Settings\IndexController::class, 'update']);
@@ -225,4 +232,28 @@ Route::group(['prefix' => 'nests'], function () {
     Route::delete('/view/{nest:id}', [Admin\Nests\NestController::class, 'destroy']);
     Route::delete('/egg/{egg:id}', [Admin\Nests\EggController::class, 'destroy']);
     Route::delete('/egg/{egg:id}/variables/{variable:id}', [Admin\Nests\EggVariableController::class, 'destroy']);
+});
+
+/*
+|--------------------------------------------------------------------------
+| Server Templates Routes
+|--------------------------------------------------------------------------
+|
+| Endpoint: /admin/templates
+|
+*/
+Route::group(['prefix' => 'templates'], function () {
+    Route::get('/', [Admin\Templates\TemplateController::class, 'index'])->name('admin.templates');
+    Route::get('/json', [Admin\Templates\TemplateController::class, 'json'])->name('admin.templates.json');
+    Route::get('/view/{template:id}', [Admin\Templates\TemplateController::class, 'show'])->name('admin.templates.view');
+    Route::get('/create', [Admin\Templates\TemplateController::class, 'create'])->name('admin.templates.create');
+
+    Route::post('/', [Admin\Templates\TemplateController::class, 'store']);
+    Route::post('/{template:id}/duplicate', [Admin\Templates\TemplateController::class, 'duplicate'])->name('admin.templates.duplicate');
+
+    Route::put('/{template:id}', [Admin\Templates\TemplateController::class, 'update']);
+
+    Route::patch('/view/{template:id}', [Admin\Templates\TemplateController::class, 'update']);
+
+    Route::delete('/view/{template:id}', [Admin\Templates\TemplateController::class, 'destroy'])->name('admin.templates.delete');
 });
