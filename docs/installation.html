@@ -65,7 +65,33 @@
             </section>
 
             <section>
-                <h2>Step-by-Step Installation</h2>
+                <h2>Quick Install (Recommended)</h2>
+                <p>The fastest way to install Hexactyl is with our automated install script. It handles everything for you.</p>
+
+                <h3>Linux (Debian/Ubuntu)</h3>
+                <p>Copy and paste this single command into your terminal:</p>
+                <pre><code>curl -sSL https://raw.githubusercontent.com/Hexactyl-Projects/hexactyl/main/install.sh | sudo bash</code></pre>
+                <p>The script will automatically:</p>
+                <ul>
+                    <li>Install PHP 8.2, MySQL, Redis, Nginx, Docker</li>
+                    <li>Download and configure Hexactyl</li>
+                    <li>Create the database and set up permissions</li>
+                    <li>Build frontend assets</li>
+                    <li>Configure Nginx as a web server</li>
+                    <li>Set up the queue worker and cron jobs</li>
+                    <li>Print your admin credentials when done</li>
+                </ul>
+
+                <h3>Windows (PowerShell as Administrator)</h3>
+                <p>Right-click PowerShell and select "Run as Administrator", then paste:</p>
+                <pre><code>PowerShell -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Hexactyl-Projects/hexactyl/main/install.ps1'))"</code></pre>
+
+                <div class="tip-box">
+                    <strong>After installation:</strong> Create your admin user with <code>php artisan p:user:make</code> from the panel directory.
+                </div>
+            </section>
+
+            <section>
                 <p>Follow each step in order. All commands are for Ubuntu/Debian. Adjust package manager commands for other distributions.</p>
 
                 <h3>Step 1: Update System Packages</h3>

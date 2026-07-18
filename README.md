@@ -97,7 +97,29 @@ Hexactyl supports a wide variety of games through Docker containers:
 
 ## Installation
 
-### Option 1: Manual Installation
+### Quick Install (Recommended)
+
+**Linux (Debian/Ubuntu) &mdash; One Command:**
+
+```bash
+curl -sSL https://raw.githubusercontent.com/Hexactyl-Projects/hexactyl/main/install.sh | sudo bash
+```
+
+**Windows &mdash; One Command (Run as Administrator):**
+
+```powershell
+PowerShell -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Hexactyl-Projects/hexactyl/main/install.ps1'))"
+```
+
+That's it. The script will:
+- Install all dependencies (PHP, MySQL, Redis, Nginx)
+- Download and configure Hexactyl
+- Set up the database
+- Build frontend assets
+- Configure Nginx and queue workers
+- Print your login credentials
+
+### Option 2: Manual Installation
 
 ```bash
 # 1. Clone the repository
